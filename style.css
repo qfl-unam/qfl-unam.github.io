@@ -70,6 +70,11 @@ footer {
   font-size: 0.9rem;
 }
 
+figure {
+  text-align: center;
+  margin: 2rem auto;
+}
+
 /* --- Botón de cambio de idioma --- */
 .language-switch {
   position: absolute;
@@ -89,4 +94,21 @@ footer {
 .language-switch a:hover {
   background-color: #3a86ff;
   color: #fff;
+}
+
+/* --- LOGO DE FONDO --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: 300px;          /* bajar el logo para que no choque con el header */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/logo.jpeg'); /* cambia por la ruta de tu logo */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 75%; /* ajusta tamaño del logo */
+  opacity: 0.075;        /* transparencia del logo */
+  z-index: -1;          /* lo envía detrás de todo */
+  pointer-events: none; /* evita que interfiera con clics */
 }
